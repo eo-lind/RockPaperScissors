@@ -12,6 +12,10 @@ namespace RockPaperScissors
 
             string playerChoice = Console.ReadLine().ToLower();
 
+<<<<<<< HEAD
+=======
+            // ! couldn't get the ascii art to work
+>>>>>>> 22fd17c3d036c5e52825b316dc6550fed24d8965
             if (playerChoice == "rock")
             {
                 Console.WriteLine($@"    _______
