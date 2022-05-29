@@ -7,7 +7,12 @@ namespace RockPaperScissors
         static void Main(string[] args)
         {
             // ------------------------------------------------------------- //
-            // TODO: execute program here
+            // TODO: write a for loop that will give the user a certain number of tries
+            int playerScore = 0;
+            int computerScore = 0;
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine($"|  Player: {playerScore}  |  Computer: {computerScore}  |");
+            Console.WriteLine("-------------------------------");
             Console.WriteLine("What will it be? Rock, Paper, or Scissors?");
             Console.WriteLine("1) Rock");
             Console.WriteLine("2) Paper");
@@ -16,7 +21,32 @@ namespace RockPaperScissors
             string playerChoiceText = Console.ReadLine();
             int playerChoiceNum = int.Parse(playerChoiceText);
             Random random = new Random();
-            int computerChoiceNum = random.Next(1, 4);
+            int computerChoiceNum = random.Next(1, 3);
+
+            if (playerChoiceNum == 1 && computerChoiceNum == 2)
+            {
+                computerScore += 1;
+            }
+            else if (playerChoiceNum == 1 && computerChoiceNum == 3)
+            {
+                playerScore += 1;
+            }
+            else if (playerChoiceNum == 2 && computerChoiceNum == 1)
+            {
+                playerScore += 1;
+            }
+            else if (playerChoiceNum == 2 && computerChoiceNum == 3)
+            {
+                computerScore += 1;
+            }
+            else if (playerChoiceNum == 3 && computerChoiceNum == 1)
+            {
+                computerScore += 1;
+            }
+            else if (playerChoiceNum == 3 && computerChoiceNum == 2)
+            {
+                playerScore += 1;
+            }
 
             if (playerChoiceNum == 1)
             {
