@@ -9,15 +9,19 @@ namespace RockPaperScissors
             // ------------------------------------------------------------- //
             // TODO: execute program here
             Console.WriteLine("What will it be? Rock, Paper, or Scissors?");
+            Console.WriteLine("1) Rock");
+            Console.WriteLine("2) Paper");
+            Console.WriteLine("3) Scissors");
 
-            string playerChoice = Console.ReadLine().ToLower();
+            string playerChoiceText = Console.ReadLine();
+            int playerChoiceNum = int.Parse(playerChoiceText);
+            Random random = new Random();
+            int computerChoiceNum = random.Next(1, 4);
 
-<<<<<<< HEAD
-=======
-            // ! couldn't get the ascii art to work
->>>>>>> 22fd17c3d036c5e52825b316dc6550fed24d8965
-            if (playerChoice == "rock")
+            if (playerChoiceNum == 1)
             {
+                Console.WriteLine("ROCK!");
+                Console.WriteLine();
                 Console.WriteLine($@"    _______
 ---'   ____)
       (_____)
@@ -25,8 +29,10 @@ namespace RockPaperScissors
       (____)
 ---.__(___)");
             }
-            else if (playerChoice == "paper")
+            else if (playerChoiceNum == 2)
             {
+                Console.WriteLine("PAPER!");
+                Console.WriteLine();
                 Console.WriteLine($@"     _______
 ---'    ____)____
            ______)
@@ -34,8 +40,10 @@ namespace RockPaperScissors
          _______)
 ---.__________)");
             }
-            else if (playerChoice == "scissors")
+            else if (playerChoiceNum == 3)
             {
+                Console.WriteLine("SCISSORS!");
+                Console.WriteLine();
                 Console.WriteLine($@"    _______
 ---'   ____)____
           ______)
@@ -44,6 +52,49 @@ namespace RockPaperScissors
 ---.__(___)");
             }
             else {
+                Console.WriteLine("Sorry, that was not a valid choice. Goodbye.");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("VS");
+            Console.WriteLine();
+
+            if (computerChoiceNum == 1)
+            {
+                Console.WriteLine("ROCK!");
+                Console.WriteLine();
+                Console.WriteLine($@"    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)");
+            }
+            else if (computerChoiceNum == 2)
+            {
+                Console.WriteLine("PAPER!");
+                Console.WriteLine();
+                Console.WriteLine($@"     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)");
+            }
+            else if (computerChoiceNum == 3)
+            {
+                Console.WriteLine("SCISSORS!");
+                Console.WriteLine();
+                Console.WriteLine($@"    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)");
+            }
+            else
+            {
                 Console.WriteLine("Sorry, that was not a valid choice. Goodbye.");
             }
 
